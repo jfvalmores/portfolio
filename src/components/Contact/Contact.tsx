@@ -1,5 +1,16 @@
 import "./Contact.css";
 
+const socials = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/justine-francis-valmores-57079a137",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/jfvalmores",
+  },
+];
+
 const Contact = () => (
   <section className="contact-section section-shell" id="contact">
     <div className="section-heading">
@@ -18,20 +29,16 @@ const Contact = () => (
         Email <span aria-hidden="true">↗</span>
       </a>
       <div className="social-links">
-        <a
-          href="https://www.linkedin.com/in/justine-francis-valmores-57079a137"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn ↗
-        </a>
-        <a
-          href="https://github.com/jfvalmores"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub ↗
-        </a>
+        {socials.map((social) => (
+          <a
+            key={social.name}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {social.name} ↗
+          </a>
+        ))}
       </div>
     </div>
   </section>
