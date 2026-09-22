@@ -38,3 +38,14 @@
     monospace;
   text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+  .contact-section {
+    display: block;
+    padding: 80px 0 100px;
+  }
+
+  .contact-links {
+    margin-top: 45px;
+  }
+}

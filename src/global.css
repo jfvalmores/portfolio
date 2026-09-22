@@ -106,10 +106,19 @@ a {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .site-header,
   .site-footer,
   .section-shell {
     width: min(100% - 40px, 1120px);
+  }
+
+  .section-heading {
+    gap: 15px;
+    margin-bottom: 35px;
+  }
+
+  .section-body {
+    margin-left: 0;
   }
 }

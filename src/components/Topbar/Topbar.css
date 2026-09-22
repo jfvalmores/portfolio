@@ -58,3 +58,13 @@ em {
   font-size: 1rem;
   line-height: 0.7;
 }
+
+@media (max-width: 768px) {
+  .site-header {
+    height: 74px;
+  }
+
+  .site-nav {
+    display: none;
+  }
+}

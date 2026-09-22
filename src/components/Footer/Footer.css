@@ -10,3 +10,11 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+@media (max-width: 768px) {
+  .site-footer {
+    gap: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

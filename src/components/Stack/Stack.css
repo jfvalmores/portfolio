@@ -30,3 +30,10 @@
   border-radius: 999px;
   font-size: 0.76rem;
 }
+
+@media (max-width: 768px) {
+  .stack-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

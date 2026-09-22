@@ -1,4 +1,4 @@
-import { useState } from "react";
+import useTheme from "./hooks/use-theme";
 import Topbar from "./components/Topbar/Topbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -20,7 +20,7 @@ import "./components/Footer/Footer.css";
 import "./components/ScrollToTop/ScrollToTop.css";
 
 function App() {
-  const [isLight, setIsLight] = useState(false);
+  const { isLight, setIsLight } = useTheme();
 
   return (
     <div className={isLight ? "app light" : "app"}>

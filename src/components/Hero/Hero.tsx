@@ -13,7 +13,7 @@ const Hero = () => (
         fast, and built to last.
       </p>
       <a className="text-link" href="#contact">
-        Let&apos;s work together <span aria-hidden="true">↗</span>
+        Let&apos;s work together <span aria-hidden="true">🚀</span>
       </a>
     </div>
     <div className="hero-art">

@@ -29,3 +29,18 @@
   margin: 0;
   max-width: 300px;
 }
+
+@media (max-width: 768px) {
+  .experience-row {
+    margin-left: 0;
+    display: block;
+  }
+
+  .period {
+    margin: 25px 0 8px;
+  }
+
+  .experience-detail {
+    margin-top: 0;
+  }
+}
