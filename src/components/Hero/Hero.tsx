@@ -1,4 +1,5 @@
 import profileImage from "../../assets/hero-profile.png";
+import "./Hero.css";
 
 const Hero = () => (
   <section className="hero section-shell">

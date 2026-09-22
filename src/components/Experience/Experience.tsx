@@ -1,3 +1,5 @@
+import "./Experience.css";
+
 const Experience = () => (
   <section className="section-shell content-section" id="experience">
     <div className="section-heading">

@@ -8,7 +8,16 @@ import Project from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import "./index.css";
+import "./global.css";
+import "./components/Topbar/Topbar.css";
+import "./components/Hero/Hero.css";
+import "./components/About/About.css";
+import "./components/Stack/Stack.css";
+import "./components/Experience/Experience.css";
+import "./components/Projects/Projects.css";
+import "./components/Contact/Contact.css";
+import "./components/Footer/Footer.css";
+import "./components/ScrollToTop/ScrollToTop.css";
 
 function App() {
   const [isLight, setIsLight] = useState(false);

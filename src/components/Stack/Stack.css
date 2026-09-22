@@ -1,0 +1,32 @@
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stack-group {
+  padding: 26px 0;
+  border-top: 2px solid var(--accent);
+}
+
+.stack-group h3 {
+  margin: 0 0 24px;
+  font:
+    0.7rem "DM Mono",
+    monospace;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.76rem;
+}

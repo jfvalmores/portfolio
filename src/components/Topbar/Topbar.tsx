@@ -1,3 +1,5 @@
+import "./Topbar.css";
+
 const Topbar = ({
   isLight,
   setIsLight,

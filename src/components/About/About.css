@@ -1,0 +1,41 @@
+.content-section {
+  padding: 112px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+  margin-bottom: 52px;
+}
+
+.section-heading h2,
+.project-section h2,
+.contact-section h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4.7rem);
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
+.section-body {
+  margin-left: clamp(60px, 15vw, 170px);
+}
+
+.large-copy {
+  max-width: 660px;
+  margin: 0 0 24px;
+  font-size: clamp(1.45rem, 3vw, 2.35rem);
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+
+.muted-copy {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.about-body .muted-copy {
+  max-width: 390px;
+}

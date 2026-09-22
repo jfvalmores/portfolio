@@ -1,3 +1,5 @@
+import "./Contact.css";
+
 const Contact = () => (
   <section className="contact-section section-shell" id="contact">
     <div className="section-heading">
@@ -13,7 +15,7 @@ const Contact = () => (
         <span className="status-dot" /> Available for projects
       </p>
       <a className="contact-email" href="mailto:dev.jvalmores@gmail.com">
-        dev.jvalmores@gmail.com <span aria-hidden="true">↗</span>
+        Email <span aria-hidden="true">↗</span>
       </a>
       <div className="social-links">
         <a

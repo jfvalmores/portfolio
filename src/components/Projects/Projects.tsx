@@ -1,3 +1,5 @@
+import "./Projects.css";
+
 const Project = () => (
   <section className="section-shell project-section">
     <div className="section-heading">

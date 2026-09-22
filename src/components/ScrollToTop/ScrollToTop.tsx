@@ -1,4 +1,5 @@
 import useScrollToTop from "../../hooks/use-scroll-to-top";
+import "./ScrollToTop.css";
 
 const ScrollToTop = () => {
   const showBackToTop = useScrollToTop();

@@ -1,3 +1,5 @@
+import "./About.css";
+
 const About = () => (
   <section className="section-shell content-section" id="about">
     <div className="section-heading">

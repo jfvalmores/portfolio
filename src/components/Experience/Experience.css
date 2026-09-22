@@ -1,0 +1,31 @@
+.experience-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.6fr 1.3fr;
+  gap: 30px;
+  margin-left: clamp(60px, 15vw, 170px);
+  padding-top: 4px;
+}
+
+.role {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  letter-spacing: -0.04em;
+}
+
+.company,
+.period {
+  margin: 0;
+}
+
+.company a {
+  color: inherit;
+}
+
+.external-link:hover {
+  color: var(--accent);
+}
+
+.experience-detail {
+  margin: 0;
+  max-width: 300px;
+}
