@@ -18,7 +18,7 @@ const Contact = () => (
       <h2>
         Let&apos;s make
         <br />
-        <em>something good.</em>
+        <em>something awesome!</em>
       </h2>
     </div>
     <div className="contact-links">
