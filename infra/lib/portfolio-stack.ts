@@ -1,19 +1,20 @@
 import { Construct } from "constructs";
-import * as acm from "aws-cdk-lib/aws-certificatemanager";
 import * as cdk from "aws-cdk-lib";
 import * as cloudfront from "aws-cdk-lib/aws-cloudfront";
 import * as origins from "aws-cdk-lib/aws-cloudfront-origins";
-import * as route53 from "aws-cdk-lib/aws-route53";
 import * as s3 from "aws-cdk-lib/aws-s3";
-import * as targets from "aws-cdk-lib/aws-route53-targets";
+
+// import * as acm from "aws-cdk-lib/aws-certificatemanager";
+// import * as route53 from "aws-cdk-lib/aws-route53";
+// import * as targets from "aws-cdk-lib/aws-route53-targets";
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class PortfolioStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const domainName = process.env.DOMAIN_NAME ?? "example.com";
-    const wwwDomainName = `www.${domainName}`;
+    // const domainName = process.env.DOMAIN_NAME ?? "example.com";
+    // const wwwDomainName = `www.${domainName}`;
 
     /*
      * Route 53
@@ -23,9 +24,9 @@ export class PortfolioStack extends cdk.Stack {
      * Make sure the domain is already using Route 53
      * before deploying this stack.
      */
-    const hostedZone = route53.HostedZone.fromLookup(this, "HostedZone", {
-      domainName,
-    });
+    // const hostedZone = route53.HostedZone.fromLookup(this, "HostedZone", {
+    //   domainName,
+    // });
 
     /*
      * ACM Certificate
@@ -35,11 +36,11 @@ export class PortfolioStack extends cdk.Stack {
      *
      * Therefore this CDK stack should be deployed to us-east-1.
      */
-    const certificate = new acm.Certificate(this, "Certificate", {
-      domainName,
-      subjectAlternativeNames: [wwwDomainName],
-      validation: acm.CertificateValidation.fromDns(hostedZone),
-    });
+    // const certificate = new acm.Certificate(this, "Certificate", {
+    //   domainName,
+    //   subjectAlternativeNames: [wwwDomainName],
+    //   validation: acm.CertificateValidation.fromDns(hostedZone),
+    // });
 
     /*
      * S3 Bucket
@@ -65,8 +66,8 @@ export class PortfolioStack extends cdk.Stack {
      * configures CloudFront Origin Access Control (OAC).
      */
     const distribution = new cloudfront.Distribution(this, "Distribution", {
-      domainNames: [domainName, wwwDomainName],
-      certificate,
+      // domainNames: [domainName, wwwDomainName],
+      // certificate,
       defaultRootObject: "index.html",
       defaultBehavior: {
         origin: origins.S3BucketOrigin.withOriginAccessControl(websiteBucket),
@@ -118,24 +119,20 @@ export class PortfolioStack extends cdk.Stack {
      *
      * justinevalmores.com → CloudFront
      */
-    new route53.ARecord(this, "RootAliasRecord", {
-      zone: hostedZone,
-      recordName: domainName,
-      target: route53.RecordTarget.fromAlias(
-        new targets.CloudFrontTarget(distribution),
-      ),
-    });
+    // new route53.ARecord(this, "RootAliasRecord", {
+    //   zone: hostedZone,
+    //   recordName: domainName,
+    //   target: route53.RecordTarget.fromAlias(new targets.CloudFrontTarget(distribution)),
+    // });
 
     /*
      * www.justinevalmores.com → CloudFront
      */
-    new route53.ARecord(this, "WwwAliasRecord", {
-      zone: hostedZone,
-      recordName: "www",
-      target: route53.RecordTarget.fromAlias(
-        new targets.CloudFrontTarget(distribution),
-      ),
-    });
+    // new route53.ARecord(this, "WwwAliasRecord", {
+    //   zone: hostedZone,
+    //   recordName: "www",
+    //   target: route53.RecordTarget.fromAlias(new targets.CloudFrontTarget(distribution)),
+    // });
 
     /*
      * CloudFormation outputs
@@ -157,9 +154,9 @@ export class PortfolioStack extends cdk.Stack {
       description: "CloudFront distribution domain",
     });
 
-    new cdk.CfnOutput(this, "WebsiteUrl", {
-      value: `https://${domainName}`,
-      description: "Portfolio website",
-    });
+    // new cdk.CfnOutput(this, "WebsiteUrl", {
+    //   value: `https://${domainName}`,
+    //   description: "Portfolio website",
+    // });
   }
 }
