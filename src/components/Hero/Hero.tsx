@@ -2,15 +2,14 @@ import profileImage from "../../assets/hero-profile.png";
 import "./Hero.css";
 
 const Hero = () => (
-  <section className="hero section-shell">
+  <section className="hero section-shell" id="home">
     <div className="hero-copy">
       <h1>
         Justine <em>Valmores</em>
       </h1>
-      <p className="hero-role">Full-Stack Developer</p>
+      <p className="hero-role">Full-Stack Software Developer</p>
       <p className="hero-lede">
-        Hi, I'm Justine. I build modern digital experiences that are thoughtful,
-        fast, and built to last.
+        Hi, I'm Justine. I build modern digital experiences that are thoughtful, fast, and built to last.
       </p>
       <a className="text-link" href="#contact">
         Let&apos;s work together <span aria-hidden="true">🚀</span>

@@ -1,34 +1,12 @@
 import "./Stack.css";
 
 const groups = [
-  [
-    "Frontend",
-    "React",
-    "Next",
-    "TypeScript",
-    "JavaScript",
-    "jQuery",
-    "Vue",
-    "Nuxt",
-    "Sass",
-    "CSS",
-    "TailwindCSS",
-  ],
+  ["Frontend", "React", "Next", "TypeScript", "JavaScript", "jQuery", "Vue", "Nuxt", "Sass", "CSS", "TailwindCSS"],
   ["Backend", "NodeJS", "Laravel", "TypeScript", "JavaScript", "Python"],
-  [
-    "Cloud & data",
-    "AWS",
-    "Kubernetes",
-    "Docker",
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
-    "Redis",
-    "Memcached",
-  ],
+  ["Cloud & data", "AWS", "Kubernetes", "Docker", "MySQL", "PostgreSQL", "MongoDB", "Redis", "Memcached"],
 ];
 const Stack = () => (
-  <section className="section-shell content-section stack-section">
+  <section className="section-shell content-section stack-section" id="toolkit">
     <div className="section-heading">
       <span className="section-number">01</span>
       <h2>Toolkit</h2>

@@ -1,7 +1,7 @@
 import "./Projects.css";
 
 const Project = () => (
-  <section className="section-shell project-section">
+  <section className="section-shell project-section" id="projects">
     <div className="section-heading">
       <span className="section-number">03</span>
       <h2>Projects</h2>
